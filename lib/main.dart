@@ -25,10 +25,11 @@ class MyApp extends StatelessWidget {
 class TestWidgt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-      "assets/doge1.jpg",
+    return Image.network(
+      "https://media3.giphy.com/media/Dl2seYrwPvfjO/giphy.gif");
+
       
-      );
+      
 
   }
 }
