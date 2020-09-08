@@ -46,8 +46,31 @@ class _TestStateflullState extends State<TestStateflull> {
 
           }
         ),
+        FlatButton(
+          onPressed:(){
+            onchangColors();
+          },
+         child:Container(
+           height: 100.0,
+           width: 200.0,
+           color: color[countColors],
+         )
+       )
       ],
     );
   }
-}
 
+  List<Color> color = [Colors.orange,Colors.pinkAccent,Colors.yellow,Colors.blue,Colors.lightBlue,Colors.lime];
+  int countColors = 0;
+  onchangColors(){
+    if (countColors > 4){
+      setState(() {
+        countColors = 0;
+      });
+  }
+  else{
+    setState(() {
+      countColors = countColors+1;
+    });
+  }
+}}
