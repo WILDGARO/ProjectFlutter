@@ -29,9 +29,13 @@ class TestWidgt extends StatelessWidget {
       children: [
         Container(
           margin:EdgeInsets.only(bottom: 50,top: 20,left: 20,right: 30),
+          padding:EdgeInsets.only(left:50),
           color:Colors.blue,
-          height: 100.0,
-          width: 100.0,
+          height: 200.0,
+          width: 200.0,
+          child: Container(
+            color: Colors.tealAccent,
+          ),
         ),
         Container(
           alignment: Alignment(-0.5,1),
@@ -45,7 +49,17 @@ class TestWidgt extends StatelessWidget {
             ),
           ),
         ),
-      ]
+        Expanded(
+          child: Container(
+            color:Colors.yellowAccent,
+          )
+          ),
+        Expanded(
+          child: Container(
+            color:Colors.blue,
+          )
+          )
+      ],
     );
   }
 }
