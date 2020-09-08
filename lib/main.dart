@@ -12,119 +12,42 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          color: Colors.black,
-          child: TestWidgt(),
-          height: 800.00,
-          width: 500.00,
-        )
+          alignment: Alignment.center,
+          child: TestStateflull()
+          )
       ),
     );
   }
 }
-
-class TestWidgt extends StatelessWidget {
+class TestStateflull extends StatefulWidget {
   @override
+  _TestStateflullState createState() => _TestStateflullState();
+}
+
+class _TestStateflullState extends State<TestStateflull> {
+  @override
+  int count = 0;
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount:3,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
-          height: 200,
-          color: Colors.red,
-        ),
-        Container(
-          height: 200,
-          color: Colors.tealAccent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.purple,
-        ),
-        Container(
-          height: 200,
-          color: Colors.orangeAccent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.transparent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.white60,
-        ),
-        Container(
-          height: 200,
-          color: Colors.white,
-        ),
-        Container(
-          height: 200,
-          color: Colors.redAccent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.red,
-        ),
-        Container(
-          height: 200,
-          color: Colors.tealAccent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.purple,
-        ),
-        Container(
-          height: 200,
-          color: Colors.orangeAccent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.transparent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.white60,
-        ),
-        Container(
-          height: 200,
-          color: Colors.white,
-        ),
-        Container(
-          height: 200,
-          color: Colors.redAccent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.red,
-        ),
-        Container(
-          height: 200,
-          color: Colors.tealAccent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.purple,
-        ),
-        Container(
-          height: 200,
-          color: Colors.orangeAccent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.transparent,
-        ),
-        Container(
-          height: 200,
-          color: Colors.white60,
-        ),
-        Container(
-          height: 200,
-          color: Colors.white,
-        ),
-        Container(
-          height: 200,
-          color: Colors.redAccent,
+        Text(
+          "Hello count $count",
+          style: TextStyle(
+            fontSize:50.0
+             ),
+          ),
+        RaisedButton(
+          onPressed: (){
+            setState(() {
+              count = count +1;
+            });
+
+
+          }
         ),
       ],
-      );
+    );
   }
 }
+
