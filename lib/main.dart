@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
         body: Container(
           color: Colors.red,
           child: TestWidgt(),
-          height: 500.00,
+          height: 800.00,
           width: 500.00,
         )
       ),
@@ -23,15 +23,14 @@ class MyApp extends StatelessWidget {
 class TestWidgt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text(
-      "Hello!" ,
-      style: TextStyle(
-        fontSize: 50.00,
-        color: Color(0xFF33691E),
-        fontWeight: FontWeight.w800,
-        
-      ),
+    return Icon(
+      Icons.airline_seat_flat,
+      color:Color(0xFF18FFFF),
+      size: 200,
       
+      
+  
     );
+
   }
 }
