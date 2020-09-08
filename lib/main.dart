@@ -25,13 +25,27 @@ class MyApp extends StatelessWidget {
 class TestWidgt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        height: 200.0,
-        width: 200.0,
-        color: Colors.red,
-      )
+    return Column(
+      children: [
+        Container(
+          margin:EdgeInsets.only(bottom: 50,top: 20,left: 20,right: 30),
+          color:Colors.blue,
+          height: 100.0,
+          width: 100.0,
+        ),
+        Container(
+          alignment: Alignment(-0.5,1),
+        color:Colors.green,
+          height: 300.0,
+          width: 300.0,
+          child:Text(
+            "Helol!",
+            style: TextStyle(
+              fontSize: 50
+            ),
+          ),
+        ),
+      ]
     );
-   
   }
 }
