@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,14 +25,10 @@ class MyApp extends StatelessWidget {
 class TestWidgt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Icon(
-      Icons.airline_seat_flat,
-      color:Color(0xFF18FFFF),
-      size: 200,
+    return Image.asset(
+      "assets/doge1.jpg",
       
-      
-  
-    );
+      );
 
   }
 }
