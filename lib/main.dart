@@ -25,37 +25,106 @@ class MyApp extends StatelessWidget {
 class TestWidgt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return GridView.count(
+      crossAxisCount:3,
       children: [
         Container(
-          height: 200.0,
-          color: Colors.deepPurpleAccent,
-        ),
-        Container(
-          height: 200.0,
-          color: Colors.blueAccent,
-        ),
-        Container(
-          height: 200.0,
-          color: Colors.cyanAccent,
-        ),
-        Container(
-          height: 200.0,
-          color: Colors.greenAccent,
-        ),
-        Container(
-          height: 200.0,
-          color: Colors.yellow,
-        ),
-        Container(
-          height: 200.0,
-          color: Colors.deepOrange,
-        ),
-        Container(
-          height: 200.0,
+          height: 200,
           color: Colors.red,
         ),
+        Container(
+          height: 200,
+          color: Colors.tealAccent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.purple,
+        ),
+        Container(
+          height: 200,
+          color: Colors.orangeAccent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.transparent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.white60,
+        ),
+        Container(
+          height: 200,
+          color: Colors.white,
+        ),
+        Container(
+          height: 200,
+          color: Colors.redAccent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.red,
+        ),
+        Container(
+          height: 200,
+          color: Colors.tealAccent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.purple,
+        ),
+        Container(
+          height: 200,
+          color: Colors.orangeAccent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.transparent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.white60,
+        ),
+        Container(
+          height: 200,
+          color: Colors.white,
+        ),
+        Container(
+          height: 200,
+          color: Colors.redAccent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.red,
+        ),
+        Container(
+          height: 200,
+          color: Colors.tealAccent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.purple,
+        ),
+        Container(
+          height: 200,
+          color: Colors.orangeAccent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.transparent,
+        ),
+        Container(
+          height: 200,
+          color: Colors.white60,
+        ),
+        Container(
+          height: 200,
+          color: Colors.white,
+        ),
+        Container(
+          height: 200,
+          color: Colors.redAccent,
+        ),
       ],
-    );
+      );
   }
 }
