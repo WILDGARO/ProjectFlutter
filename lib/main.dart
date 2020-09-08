@@ -25,40 +25,36 @@ class MyApp extends StatelessWidget {
 class TestWidgt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         Container(
-          margin:EdgeInsets.only(bottom: 50,top: 20,left: 20,right: 30),
-          padding:EdgeInsets.only(left:50),
-          color:Colors.blue,
           height: 200.0,
-          width: 200.0,
-          child: Container(
-            color: Colors.tealAccent,
-          ),
+          color: Colors.deepPurpleAccent,
         ),
         Container(
-          alignment: Alignment(-0.5,1),
-        color:Colors.green,
-          height: 300.0,
-          width: 300.0,
-          child:Text(
-            "Helol!",
-            style: TextStyle(
-              fontSize: 50
-            ),
-          ),
+          height: 200.0,
+          color: Colors.blueAccent,
         ),
-        Expanded(
-          child: Container(
-            color:Colors.yellowAccent,
-          )
-          ),
-        Expanded(
-          child: Container(
-            color:Colors.blue,
-          )
-          )
+        Container(
+          height: 200.0,
+          color: Colors.cyanAccent,
+        ),
+        Container(
+          height: 200.0,
+          color: Colors.greenAccent,
+        ),
+        Container(
+          height: 200.0,
+          color: Colors.yellow,
+        ),
+        Container(
+          height: 200.0,
+          color: Colors.deepOrange,
+        ),
+        Container(
+          height: 200.0,
+          color: Colors.red,
+        ),
       ],
     );
   }
