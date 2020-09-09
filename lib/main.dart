@@ -54,6 +54,7 @@ class _TestStateflullState extends State<TestStateflull> {
     setState(() {
      _messages = messagefrom.text;
     });
+    messagefrom.clear();
   }
 
 
