@@ -84,6 +84,22 @@ class _TestStateflullState extends State<TestStateflull> {
         ),
         TextFormField(
           controller:messagefrom ,
+          decoration: InputDecoration(
+            hintText:"ลองพิมพ์",
+            hintStyle: TextStyle(
+              color:Colors.green,
+              fontSize: 30.0
+            ),
+
+            border:InputBorder.none,
+            icon:Icon(
+              Icons.message,
+              size: 50.0,
+            ),
+            fillColor: Colors.brown,
+            filled: true
+
+          ),
         ),
         RaisedButton(
           onPressed:(){
