@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Container(
           alignment: Alignment.center,
+          color: Colors.blue,
           child: TestStateflull()
           )
       ),
@@ -26,94 +27,61 @@ class TestStateflull extends StatefulWidget {
 }
 
 class _TestStateflullState extends State<TestStateflull> {
- String message = "Why";
- List<Color>color = [Colors.red,Colors.blue];
- int countColors = 0;
- _ontapup(){
-   setState((){
-     message = "ขึ้น";
-     countColors = 0;
-   });
- }
- _ontapdown(){
-   setState((){
-     message = "ลง";
-     countColors = 1;
-   });  
- }
-
- TextEditingController messagefrom;
-  @override
-  void initState(){
-    super.initState();
-    messagefrom = TextEditingController();
-  }
-  
-    String _messages = "";
-  _onsubmitt(){
-    setState(() {
-     _messages = messagefrom.text;
-    });
-    messagefrom.clear();
-  }
-
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          "Hello $message",
-          style: TextStyle(
-            fontSize:50.0
-             ),
-          ),
-        GestureDetector(
-          onTapDown:(e)=>{
-            _ontapdown()
-          },
-          onTapUp: (e)=>{
-            _ontapup()
-          },
-          child: Container(
-            width: 200,
-            height: 100,
-            color: color[countColors],
-          ),
-        ),
-        TextFormField(
-          controller:messagefrom ,
-          decoration: InputDecoration(
-            hintText:"ลองพิมพ์",
-            hintStyle: TextStyle(
-              color:Colors.green,
-              fontSize: 30.0
+    return Container(
+      alignment: Alignment.center,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          FlatButton(
+            onPressed: (){
+
+            },
+           child: Container(
+             alignment: Alignment.center,
+             height: 120,
+             width: 200,
+            decoration: BoxDecoration(
+              color: Colors.lime[900],
+              borderRadius: BorderRadius.all(Radius.circular(40.0))
             ),
-
-            border:InputBorder.none,
-            icon:Icon(
-              Icons.message,
-              size: 50.0,
+            child: Text(
+              "Next Page",
+              style: TextStyle(
+                fontSize:30.0
+              ),
             ),
-            fillColor: Colors.brown,
-            filled: true
-
-          ),
-        ),
-        RaisedButton(
-          onPressed:(){
-          _onsubmitt();
-
-          }
-        ),
-        Text(
-          "message $_messages",
-          style:TextStyle(
-            fontSize: 50
-          ),
           )
-      ],
+          ),
+        ],
+      ),
+    )
+    ;
+  }
+}
+class Screen2 extends StatefulWidget {
+  @override
+  _Screen2State createState() => _Screen2State();
+}
+
+class _Screen2State extends State<Screen2> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: Appbar(
+        title:Text("Page2"),
+        ),
+        body: Container(
+          color: Colors.pink,
+          child: Text(
+            "Page2นะ",
+            style: TextStyle(
+              fontSize: 50.0
+            ),
+          ),
+        ),
     );
   }
 }
