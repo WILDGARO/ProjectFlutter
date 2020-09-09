@@ -37,6 +37,10 @@ class _TestStateflullState extends State<TestStateflull> {
         children: [
           FlatButton(
             onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context)=>Screen2())
+                );
 
             },
            child: Container(
@@ -70,9 +74,9 @@ class _Screen2State extends State<Screen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Appbar(
+      appBar: AppBar(
         title:Text("Page2"),
-        ),
+       ),
         body: Container(
           color: Colors.pink,
           child: Text(
