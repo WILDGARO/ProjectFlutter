@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -25,52 +26,77 @@ class TestStateflull extends StatefulWidget {
 }
 
 class _TestStateflullState extends State<TestStateflull> {
+ String message = "Why";
+ List<Color>color = [Colors.red,Colors.blue];
+ int countColors = 0;
+ _ontapup(){
+   setState((){
+     message = "ขึ้น";
+     countColors = 0;
+   });
+ }
+ _ontapdown(){
+   setState((){
+     message = "ลง";
+     countColors = 1;
+   });  
+ }
+
+ TextEditingController messagefrom;
   @override
-  int count = 0;
+  void initState(){
+    super.initState();
+    messagefrom = TextEditingController();
+  }
+  
+    String _messages = "";
+  _onsubmitt(){
+    setState(() {
+     _messages = messagefrom.text;
+    });
+  }
+
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Hello count $count",
+          "Hello $message",
           style: TextStyle(
             fontSize:50.0
              ),
           ),
+        GestureDetector(
+          onTapDown:(e)=>{
+            _ontapdown()
+          },
+          onTapUp: (e)=>{
+            _ontapup()
+          },
+          child: Container(
+            width: 200,
+            height: 100,
+            color: color[countColors],
+          ),
+        ),
+        TextFormField(
+          controller:messagefrom ,
+        ),
         RaisedButton(
-          onPressed: (){
-            setState(() {
-              count = count +1;
-            });
-
+          onPressed:(){
+          _onsubmitt();
 
           }
         ),
-        FlatButton(
-          onPressed:(){
-            onchangColors();
-          },
-         child:Container(
-           height: 100.0,
-           width: 200.0,
-           color: color[countColors],
-         )
-       )
+        Text(
+          "message $_messages",
+          style:TextStyle(
+            fontSize: 50
+          ),
+          )
       ],
     );
   }
-
-  List<Color> color = [Colors.orange,Colors.pinkAccent,Colors.yellow,Colors.blue,Colors.lightBlue,Colors.lime];
-  int countColors = 0;
-  onchangColors(){
-    if (countColors > 4){
-      setState(() {
-        countColors = 0;
-      });
-  }
-  else{
-    setState(() {
-      countColors = countColors+1;
-    });
-  }
-}}
+}
